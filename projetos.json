@@ -1,0 +1,14 @@
+[
+  {
+    "nome": "Plataforma EAD",
+    "descricao": "Solução em Moodle sobre LGPD para um escritório jurídico.",
+    "imagem": "img/icones_gerais/ferramentas_identidade/moodle.svg",
+    "ferramentas": ["img/icones_gerais/ferramentas_identidade/moodle.svg", "img/icones_gerais/ferramentas_identidade/php.svg", "img/icones_gerais/ferramentas_identidade/css.svg", "img/icones_gerais/ferramentas_identidade/clickup.svg"]
+  },
+  {
+    "nome": "Refeição Sustentável",
+    "descricao": "App em FlutterFlow e Firebase para o restaurante estudantil.",
+    "imagem": "img/experiencias/logocefet.png",
+    "ferramentas": ["img/icones_gerais/ferramentas_identidade/flutterflow.svg", "img/icones_gerais/ferramentas_identidade/firebase.svg", "img/icones_gerais/ferramentas_identidade/figma.svg"]
+  }
+]

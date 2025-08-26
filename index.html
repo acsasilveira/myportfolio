@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acsa's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/icones_gerais/id/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">   
+    
+    <!-- Importações de JS importantes -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Estilização do Carrossel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/icones_gerais/id/logo.svg" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="menu">
+                <div class="menu-escrito">
+                    <a href="#home">
+                        <p class="links">home</p>
+                    </a>
+                    <div class="sobremim">
+                        <button class="sobremim" onclick="Dropdown()">
+                                <p id="sobremim">sobre mim</p>
+                                <img src="img/icones_gerais/seta_fechado_clara.svg"/>
+                        </button>
+                        <div class="dropdown" id="dropdown">
+                            <a href="#quemsoueu">
+                                <p class="links">quem sou eu</p>
+                            </a>
+                            <a href="#experiencias">
+                                <p class="links">experiências</p>
+                            </a>
+                            <a href="#habilidades">
+                                <p class="links">habilidades</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="#codelab">
+                        <p class="links">codelab</p>
+                    </a>
+                    <a href="#servicos">
+                        <p class="links">serviços</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <a href="#">
+                    <button class="botao" id="contato">
+                    <p>entre em contato</p>
+                </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Home -->
+        <section id="home">
+            <div class="titulo">
+                <hr class="div-titulo-cima">
+                <h1 id="titulo">Acsa's Portfolio</h1>
+                <h1 id="titulo-celular">Acsa's</h1>
+                <h1 id="titulo-celular">Portfolio</h1>
+                <hr class="div-titulo-baixo">
+            </div>
+            <div class="home-content">
+                <div class="texto">
+                    <p class="texto-home">Sinta-se a vontade para conhecer o portfólio de uma</p>
+                    <h4 class="texto-alternante"><span class="multiple-text"></span></h4>
+                </div>
+                <img src="img/fotos/foto_home.png" alt="Acsa Silveira" class="foto-home">
+            </div>
+        </section>
+        <hr class="entre-secoes">
+        <!-- Seção Sobre Mim -->
+        <section id="quemsoueu">
+            <div class="sobremim-content">
+                <img src="img/fotos/foto_sobre_mim.png" alt="Acsa Silveira" class="foto-sobremim">
+                <div class="texto">
+                    <h2 class="sobremim-titulo">Sobre mim</h2>
+                    <p> Eu sou uma estudante de Sistemas de Informação, formada como técnica em informática pelo CEFETMG.</p>
+                </div>
+            </div>
+            <div class="linha-redes">
+                <button class="botao-redes">
+                    <a href="https://linkedin.com/in/acsasilveira">
+                        <img src="img/icones_gerais/redes/linkedin.svg" alt="Linkedin" class="linkedin">
+                    </a>
+                </button>
+                <button class="botao-redes">
+                    <a href="https://github.com/acsasilveira">
+                        <img src="img/icones_gerais/redes/github.svg" alt="Github" class="github">
+                    </a>
+                </button>
+                <button class="botao-redes">
+                    <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20vi%20seu%20portf%C3%B3lio%20e%20resolvi%20conversar%20com%20voc%C3%AA!!">
+                        <img src="img/icones_gerais/redes/whatsapp.svg" alt="WhatsApp" class="whatsapp">
+                    </a>
+                </button>
+            </div>
+        </section>
+        <hr class="entre-secoes">
+        <!-- Subseção Experiências -->
+        <section id="experiencias">
+            <div class="titulo">
+                <hr class="div-titulo-cima">
+                <h1 id="titulo">Minha Experiência</h1>
+                <h1 id="titulo-celular">Minha</h1>
+                <h1 id="titulo-celular">Experiência</h1>
+                <hr class="div-titulo-baixo">
+            </div>
+            <div class="swiper projetos">
+                <div class="swiper-wrapper" id="projetos-container">
+                    
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Subseção Habilidades -->
+        <section id="habilidades">
+            
+        </section>
+
+        <!-- Seção CodeLab -->
+        <section id="codelab">
+
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos">
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    </footer>
+
+    <!-- Importação do JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
