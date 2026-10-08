@@ -1,20 +1,97 @@
 [
   {
     "nome": "Plataforma EAD",
-    "descricao": "Solução em Moodle sobre LGPD para um escritório jurídico.",
-    "imagem": "img/icones_gerais/ferramentas_identidade/moodle.svg",
-    "ferramentas": ["img/icones_gerais/ferramentas_identidade/moodle.svg", "img/icones_gerais/ferramentas_identidade/php.svg", "img/icones_gerais/ferramentas_identidade/clickup.svg"]
+    "descricao": "Desenvolvimento de uma Plataforma de Ensino à Distância para o escritório Cardoso Freire Advocacia e Consultoria (CFAC), especializado em aplicação de LGPD e Direito Trabalhista para Laboratório de Análises Clínicas. A Plataforma, baseada em Moodle, já conta com mais de 300 usuários e é de uso essencial para o treinamento e conscientização dos colaboradores dos laboratórios atendidos pela CFAC. Foi desenvolvido apenas para uso restrito e não está disponível publicamente.",
+    "imagem": "img/experiencias/moodle.png",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/moodle.svg",
+      "img/icones_gerais/ferramentas_colorido/php.svg",
+      "img/icones_gerais/ferramentas_colorido/clickup.svg",
+      "img/icones_gerais/ferramentas_colorido/hostgator.svg",
+      "img/icones_gerais/ferramentas_colorido/google.svg"
+    ]
   },
   {
     "nome": "Refeição Sustentável",
-    "descricao": "App em FlutterFlow e Firebase para o restaurante estudantil.",
+    "descricao": "Desenvolvimento de uma Aplicação Web para agendamento de refeições voltado para os usuários e funcionários do Restaurante Universitário da Universidade Federal de Ciência e Inovação de Minas Gerais (UFCIMG) do Campus Varginha. Esse sistema foi fruto de uma Iniciação Científica Júnior desenvolvida entre 2023 e 2024 com o intuíto de diminuir o índice de desperdício de alimentos.",
     "imagem": "img/experiencias/RefeicaoSustentavel.png",
-    "ferramentas": ["img/icones_gerais/ferramentas_identidade/flutterflow.svg", "img/icones_gerais/ferramentas_identidade/firebase.svg", "img/icones_gerais/ferramentas_identidade/figma.svg"]
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/figma.svg",
+      "img/icones_gerais/ferramentas_colorido/flutterflow.svg",
+      "img/icones_gerais/ferramentas_colorido/firebase.svg"
+    ]
   },
   {
-    "nome": "Estragou, e  agora?",
-    "descricao": "Projeto de TCC do curso Técnico",
+    "nome": "Estragou, e agora?",
+    "descricao": "Desenvolvimento de uma Aplicação Web para conectar Prestadores de Serviço a Clientes. Esse sistema foi desenvolvido como Trabalho de Conclusão de Curso Técnico no ano de 2023. A principal ideia do projeto é promover facilidade e segurança na contratação informal de serviços domésticos e de reparos em geral.",
     "imagem": "img/experiencias/bicho.png",
-    "ferramentas": ["img/icones_gerais/ferramentas_identidade/laravel.svg", "img/icones_gerais/ferramentas_identidade/mysql.svg", "img/icones_gerais/ferramentas_identidade/php.svg"]
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/figma.svg",
+      "img/icones_gerais/ferramentas_colorido/mysql.svg",
+      "img/icones_gerais/ferramentas_colorido/php.svg",
+      "img/icones_gerais/ferramentas_colorido/laravel.svg"
+    ]
+  },
+  {
+    "nome": "Minicurso IA Generativa: uma nova forma de usarmos nossa inteligência no trabalho",
+    "descricao": "Treinamento realizado em parceria com duas empresas para auxiliar os colabores a inserir o uso de IA Generativa no seu cotidiano. O treinamento foi ministrado em junho de 2025 no coworking Cesullab em Varginha-MG.",
+    "imagem": "img/experiencias/treinamento_ia.jpg",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/canva.svg"
+    ]
+  },
+  {
+    "nome": "Projeto Conciliação Bancária Automatizada",
+    "descricao": "Desenvolvimento de um sistema web para automação do processo de conciliação bancária integrado à Inteligência Artificial. O sistema é de uso interno e restrito. A aplicação foi desenvolvida entre 2025 e 2026.",
+    "imagem": "img/experiencias/cba.jpg",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/python.svg",
+      "img/icones_gerais/ferramentas_colorido/github.svg",
+      "img/icones_gerais/ferramentas_colorido/gemini.svg"
+    ]
+  },
+  {
+    "nome": "Criação de Logotipo",
+    "descricao": "Criação de Logotipo para fortalecimento e identidade de marca de empreendedores ou pequenas empresas.",
+    "imagem": "img/experiencias/logos.png",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/canva.svg",
+      "img/icones_gerais/ferramentas_colorido/figma.svg"
+    ]
+  },
+  {
+    "nome": "La Cuisine",
+    "descricao": "Sistema web integrado à Inteligência Artificial Generativa para gerenciamento de receitas e menus, voltado para o público de chefs de cozinha. Esse projeto foi desenvolvido como parte da disciplina de Aplicações Web durante a graduação em Sistemas de Informação na Universidade Federal de Ciência e Inovação de Minas Gerais (UFCIMG).",
+    "imagem": "img/experiencias/lacuisine.jpeg",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/figma.svg",
+      "img/icones_gerais/ferramentas_colorido/html.svg",
+      "img/icones_gerais/ferramentas_colorido/css.svg",
+      "img/icones_gerais/ferramentas_colorido/javascript.svg",
+      "img/icones_gerais/ferramentas_colorido/python.svg",
+      "img/icones_gerais/ferramentas_colorido/gemini.svg"
+    ]
+  },
+  {
+    "nome": "Site Institucional Fisioterapia Domiciliar",
+    "descricao": "Site institucional desenvolvido para fortalecimento da marca da fisioterapeuta Dra. Gabriela Ribeiro, com foco em atendimento domiciliar. O site está disponível na web e conta com link direto para WhatsApp para agendamento e também com o plugin VLibras garantindo maior acessibilidade. O desenvolvimento deste site é fruto da disciplina Design de Interação cursada durante a graduação em Sistemas de Informação na Universidade Federal de Ciência e Inovação de Minas Gerais (UFCIMG).",
+    "imagem": "img/experiencias/fisio.png",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/figma.svg",
+      "img/icones_gerais/ferramentas_colorido/firebase.svg",
+      "img/icones_gerais/ferramentas_colorido/html.svg",
+      "img/icones_gerais/ferramentas_colorido/css.svg",
+      "img/icones_gerais/ferramentas_colorido/javascript.svg",
+      "img/icones_gerais/ferramentas_colorido/vlibras.svg"
+    ]
+  },
+  {
+    "nome": "PythonClima",
+    "descricao": "Montagem de uma Estação Meteorológica de baixo custo durante a participação em um projeto de Iniciação Científica na Universidade Federal de Ciência e Inovação de Minas Gerais (UFCIMG), que une uso de estação meteorológica, coleta de dados e análise preditiva com auxílio de Inteligência Artificial para prevenção de desenvolvimento de doenças na folha do café.",
+    "imagem": "img/experiencias/bic.jpeg",
+    "ferramentas": [
+      "img/icones_gerais/ferramentas_colorido/arduinoIDE.svg",
+      "img/icones_gerais/ferramentas_colorido/python.svg"
+    ]
   }
 ]

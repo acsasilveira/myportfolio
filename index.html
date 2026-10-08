@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acsa's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="img/icones_gerais/id/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">   
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/carousel.css"> -->
-    
+
     <!-- Importações de JS importantes -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Estilização do Carrossel -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -34,8 +35,8 @@
                     </a>
                     <div class="sobremim">
                         <button class="sobremim" onclick="Dropdown()">
-                                <p id="sobremim">sobre mim</p>
-                                <img src="img/icones_gerais/seta_fechado_clara.svg"/>
+                            <p id="sobremim">sobre mim</p>
+                            <img src="img/icones_gerais/seta_fechado_clara.svg" />
                         </button>
                         <div class="dropdown" id="dropdown">
                             <a href="#quemsoueu">
@@ -49,20 +50,18 @@
                             </a>
                         </div>
                     </div>
-                    
-                    <a href="#codelab">
-                        <p class="links">codelab</p>
-                    </a>
+
                     <a href="#servicos">
                         <p class="links">serviços</p>
                     </a>
                 </div>
             </div>
             <div>
-                <a href="#">
+                <a
+                    href="https://wa.me/5535988049236?text=Ol%C3%A1,%20vi%20seu%20portf%C3%B3lio%20e%20resolvi%20conversar%20com%20voc%C3%AA!!">
                     <button class="botao" id="contato">
-                    <p>entre em contato</p>
-                </button>
+                        <p>entre em contato</p>
+                    </button>
                 </a>
             </div>
         </nav>
@@ -83,17 +82,37 @@
                     <p class="texto-home">Sinta-se a vontade para conhecer o portfólio de uma</p>
                     <h4 class="texto-alternante"><span class="multiple-text"></span></h4>
                 </div>
-                <img src="img/fotos/foto_home.png" alt="Acsa Silveira" class="foto-home">
+                <img src="img/fotos/foto_home.jpeg" alt="Acsa Silveira" class="foto-home">
             </div>
         </section>
         <hr class="entre-secoes">
         <!-- Seção Sobre Mim -->
         <section id="quemsoueu">
             <div class="sobremim-content">
-                <img src="img/fotos/foto_sobre_mim.png" alt="Acsa Silveira" class="foto-sobremim">
+                <img src="img/fotos/foto_formatura.jpg" alt="Acsa Silveira" class="foto-sobremim">
                 <div class="texto">
                     <h2 class="sobremim-titulo">Sobre mim</h2>
-                    <p> Eu sou uma estudante de Sistemas de Informação, formada como técnica em informática pelo CEFETMG.</p>
+                    <p> Meu nome é <b>Acsa Silveira</b>. <br>
+                        Sou Técnica em Informática pela UFCIMG e graduanda em Ciência
+                        da Computação pela UFV. </p>
+                    <br>
+                    <p>Gosto de construir soluções que unem tecnologia, criatividade e propósito. Minha área de
+                        interesse vai desde o <b>desenvolvimento de software</b> e <b>inteligência artificial</b> até
+                        <b>educação</b>, <b>inovação</b>
+                        e <b>gestão de projetos</b>. Sou uma pessoa curiosa por natureza e estou sempre explorando novas
+                        ferramentas, metodologias e formas de transformar problemas em oportunidades.
+                    </p>
+                    <br>
+                    <p>Acredito que aprender é um processo contínuo e que compartilhar conhecimento faz parte desse
+                        caminho. Por isso, além de desenvolver projetos, também gosto de ensinar, colaborar em equipes
+                        multidisciplinares e participar de iniciativas que gerem impacto real.</p>
+                    <br>
+                    <p>Meu objetivo é crescer como profissional da tecnologia sem perder aquilo que considero
+                        essencial: a <b>capacidade de aprender, criar e contribuir</b> para a vida das pessoas por meio
+                        da
+                        computação.
+                    </p>
+                    <br>
                 </div>
             </div>
             <div class="linha-redes">
@@ -108,7 +127,8 @@
                     </a>
                 </button>
                 <button class="botao-redes">
-                    <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20vi%20seu%20portf%C3%B3lio%20e%20resolvi%20conversar%20com%20voc%C3%AA!!">
+                    <a
+                        href="https://wa.me/5535988049236?text=Ol%C3%A1,%20vi%20seu%20portf%C3%B3lio%20e%20resolvi%20conversar%20com%20voc%C3%AA!!">
                         <img src="img/icones_gerais/redes/whatsapp.svg" alt="WhatsApp" class="whatsapp">
                     </a>
                 </button>
@@ -124,41 +144,430 @@
                 <h1 id="titulo-celular">Experiência</h1>
                 <hr class="div-titulo-baixo">
             </div>
-            
+
             <div class="carrossel-container">
                 <div class="swiper projetos">
                     <div class="swiper-wrapper" id="projetos-container">
-                        <!-- Os slides serão carregados dinamicamente pelo JavaScript -->
+                        <!-- Os slides serão carregados dinamicamente via projetos.json -->
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
+        </section>
+
+        <hr class="entre-secoes">
 
         <!-- Subseção Habilidades -->
         <section id="habilidades">
-            
+            <div class="titulo">
+                <hr class="div-titulo-cima">
+                <h1 id="titulo">Habilidades</h1>
+                <h1 id="titulo-celular">Habilidades</h1>
+                <hr class="div-titulo-baixo">
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="habilidades-grupo">
+                <div class="habilidades-subtitulo">
+                    <img src="img/habilidades/softskills_subtitulo.svg" alt="Soft Skills" class="icone-subtitulo">
+                    <h2>Soft Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="img/habilidades/pensamento_criativo.svg" alt="Pensamento crítico e criativo">
+                        <p>Pensamento crítico e criativo</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/aprendizado_continuo.svg" alt="Aprendizado contínuo">
+                        <p>Aprendizado contínuo</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/comunicacao.svg" alt="Comunicação">
+                        <p>Comunicação</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/tomada_decisao.svg" alt="Tomada de decisão">
+                        <p>Tomada de decisão</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/proatividade.svg" alt="Força de vontade e proatividade">
+                        <p>Força de vontade e proatividade</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hard Skills -->
+            <div class="habilidades-grupo">
+                <div class="habilidades-subtitulo">
+                    <img src="img/habilidades/hardkills_subtitulo.svg" alt="Hard Skills" class="icone-subtitulo">
+                    <h2>Hard Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="img/habilidades/banco_dados.svg" alt="Banco de Dados">
+                        <p>Banco de Dados</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/prog_orientada_objetos.svg" alt="Programação Orientada a Objetos">
+                        <p>Programação Orientada a Objetos</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/desenvolvimento_web.svg" alt="Desenvolvimento Web">
+                        <p>Desenvolvimento Web</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/ingles.svg" alt="Inglês Intermediário">
+                        <p>Inglês Intermediário</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/habilidades/uso_ia.svg" alt="Fluência no uso estratégico da IA Generativa">
+                        <p>Fluência no uso estratégico da IA Generativa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linguagens e Ferramentas -->
+            <div class="habilidades-grupo">
+                <div class="habilidades-subtitulo">
+                    <img src="img/habilidades/linguagens_ferramentas_subtitulo.svg" alt="Linguagens e Ferramentas"
+                        class="icone-subtitulo">
+                    <h2>Linguagens e Ferramentas</h2>
+                </div>
+                <p class="orientacao-hover">Passe o mouse por cima de cada quadro e tenha uma surpresa!</p>
+
+                <div class="quadros-ferramentas-grid">
+                    <!-- Card 1: Linguagens de Programação -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Linguagens de Programação</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/php.svg" alt="PHP"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/c.svg" alt="C/C++"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/python.svg" alt="Python"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">PHP</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 50%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">C/C++</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Python</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Desenvolvimento Web -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Desenvolvimento Web</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/html.svg" alt="HTML5"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/css.svg" alt="CSS3"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/javascript.svg" alt="JavaScript"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/laravel.svg" alt="Laravel"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">HTML/CSS</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">JS</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Laravel</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Banco de Dados -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Banco de Dados</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/mysql.svg" alt="MySQL"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/firebase.svg" alt="Firebase"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">MySQL</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Firebase</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Plataformas de Desenvolvimento -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Plataformas de Desenvolvimento</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/flutterflow.svg" alt="FlutterFlow"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/moodle.svg" alt="Moodle"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/figma.svg" alt="Figma"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/arduinoIDE.svg" alt="ArduinoIDE"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">FlutterFlow</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Moodle</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Figma</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Arduino</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Ferramentas de Produtividade -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Ferramentas de Produtividade</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/clickup.svg" alt="ClickUp"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/notion.svg" alt="Notion"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">ClickUp</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Notion</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Outros -->
+                    <div class="quadro-ferramenta">
+                        <div class="quadro-inner">
+                            <div class="quadro-frente">
+                                <h3>Outros</h3>
+                                <div class="ferramentas-icones">
+                                    <img src="img/icones_gerais/ferramentas_colorido/github.svg" alt="GitHub"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/latex.svg" alt="LaTeX"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/vscode.svg" alt="VSCode"
+                                        class="ferramenta-img">
+                                    <img src="img/icones_gerais/ferramentas_colorido/google.svg" alt="Google Workspace"
+                                        class="ferramenta-img">
+                                </div>
+                            </div>
+                            <div class="quadro-verso">
+                                <h3>Nível de Conhecimento</h3>
+                                <div class="dominio-lista">
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">GitHub</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">LaTeX</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">VSCode</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 95%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dominio-item">
+                                        <span class="tech-nome">Google</span>
+                                        <div class="barra-progresso">
+                                            <div class="progresso-preenchimento" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Seção CodeLab -->
-        <section id="codelab">
-
-        </section>
+        <hr class="entre-secoes">
 
         <!-- Seção Serviços -->
         <section id="servicos">
+            <div class="titulo">
+                <hr class="div-titulo-cima">
+                <h1 id="titulo">Meus Serviços</h1>
+                <h1 id="titulo-celular">Meus Serviços</h1>
+                <hr class="div-titulo-baixo">
+            </div>
 
+            <div class="servicos-container">
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="img/fotos/landingpage.webp" alt="Desenvolvimento Web">
+                    </div>
+                    <div class="servico-info">
+                        <h2>Desenvolvimento Web</h2>
+                        <p>Criação de sites institucionais, landing pages e sistemas web responsivos com design
+                            exclusivo, navegação intuitiva e alta performance.</p>
+                        <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Desenvolvimento%20Web!"
+                            target="_blank" class="btn-orcamento">
+                            Quero orçar esse serviço!
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="img/fotos/uxdesign.png" alt="Prototipagem & UI/UX Design">
+                    </div>
+                    <div class="servico-info">
+                        <h2>Prototipagem e UX Design</h2>
+                        <p>Desenvolvimento de wireframes, protótipos interativos no Figma e planejamento de experiência
+                            do usuário focado em usabilidade, acessibilidade e identidade visual.</p>
+                        <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Design%20e%20Prototipagem!"
+                            target="_blank" class="btn-orcamento">
+                            Quero orçar esse serviço!
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-servico">
+                    <div class="servico-imagem">
+                        <img src="img/fotos/sistemasobmedida.jpg" alt="Sistemas Sob Medida">
+                    </div>
+                    <div class="servico-info">
+                        <h2>Sistemas Sob Medida</h2>
+                        <p>Criação de softwares e sistemas personalizados focados em resolver desafios específicos do
+                            seu negócio, automatizando processos e otimizando resultados.</p>
+                        <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Sistemas%20Sob%20Medida!"
+                            target="_blank" class="btn-orcamento">
+                            Quero orçar esse serviço!
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-
+        <div class="footer-content">
+            <h2 class="footer-titulo">Made with <span class="coracao">♥</span> by Acsa</h2>
+            <div class="footer-contatos">
+                <a href="mailto:acsasilveira.ti@gmail.com" class="footer-link">
+                    <img src="img/icones_gerais/redes/email.svg" alt="Email" class="footer-icone">
+                    <span>acsasilveira.ti@gmail.com</span>
+                </a>
+                <a href="https://wa.me/5535988049236?text=Ol%C3%A1,%20vi%20seu%20portf%C3%B3lio%20e%20resolvi%20conversar%20com%20voc%C3%AA!!"
+                    target="_blank" class="footer-link">
+                    <img src="img/icones_gerais/redes/whatsapp.svg" alt="WhatsApp" class="footer-icone">
+                    <span>@acsasilveira</span>
+                </a>
+                <a href="https://linkedin.com/in/acsasilveira" target="_blank" class="footer-link">
+                    <img src="img/icones_gerais/redes/linkedin.svg" alt="LinkedIn" class="footer-icone">
+                    <span>acsasilveira</span>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <!-- Importação do JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>

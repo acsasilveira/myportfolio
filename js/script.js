@@ -20,21 +20,10 @@ window.onclick = function(e) {
 }
 
 
-/* efeito de escrita na tela inicial 
-const escrito= new Typed('.multiple-text', {
-   strings: ['Técnica em Informática', 'Web Developer', 'Aspirante a Palestrante',
-      'Full-stack','Low-code Developer', 'Futura Cientista de Dados'],
-   typeSpeed: 50,
-   backSpeed: 50,
-   backDelay: 100,
-   loop:true
-});
-*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const escrito = new Typed('.multiple-text', {
        strings: ['Técnica em Informática', 'Web Developer', 'Aspirante a Palestrante',
-          'Full-stack','Low-code Developer', 'Futura Cientista de Dados'],
+          'Full-stack','Low-code Developer', 'Futura Cientista da Computação'],
        typeSpeed: 50,
        backSpeed: 50,
        backDelay: 100,
@@ -43,60 +32,97 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-/* Carrossel Experiências */
-
-
+/* Carrossel Experiências (Carregamento dinâmico via projetos.json) */
 async function carregarProjetos() {
-  const resposta = await fetch("projetos.json");
-  const projetos = await resposta.json();
+    const projetosFallback = [
+        {
+            nome: "Plataforma EAD",
+            descricao: "Solução em Moodle sobre LGPD para um escritório jurídico.",
+            imagem: "img/experiencias/logoadvogada.png",
+            ferramentas: [
+                "img/icones_gerais/ferramentas_identidade/moodle.svg",
+                "img/icones_gerais/ferramentas_identidade/php.svg",
+                "img/icones_gerais/ferramentas_identidade/clickup.svg"
+            ]
+        },
+        {
+            nome: "Refeição Sustentável",
+            descricao: "App em FlutterFlow e Firebase para o restaurante estudantil.",
+            imagem: "img/experiencias/RefeicaoSustentavel.png",
+            ferramentas: [
+                "img/icones_gerais/ferramentas_identidade/flutterflow.svg",
+                "img/icones_gerais/ferramentas_identidade/firebase.svg",
+                "img/icones_gerais/ferramentas_identidade/figma.svg"
+            ]
+        },
+        {
+            nome: "Estragou, e agora?",
+            descricao: "Projeto de TCC do curso Técnico.",
+            imagem: "img/experiencias/bicho.png",
+            ferramentas: [
+                "img/icones_gerais/ferramentas_identidade/laravel.svg",
+                "img/icones_gerais/ferramentas_identidade/mysql.svg",
+                "img/icones_gerais/ferramentas_identidade/php.svg"
+            ]
+        }
+    ];
 
-  const container = document.getElementById("projetos-container");
+    let projetos = projetosFallback;
 
-  projetos.forEach(projeto => {
-    const slide = document.createElement("div");
-    slide.classList.add("swiper-slide");
+    try {
+        const resposta = await fetch("projetos.json");
+        if (resposta.ok) {
+            projetos = await resposta.json();
+        }
+    } catch (err) {
+        console.warn("Utilizando projetos padrão fallback:", err);
+    }
 
-    slide.innerHTML = `
-      <div class="projeto-imagem">
-        <img src="${projeto.imagem}" alt="${projeto.nome}" loading="lazy">
-      </div>
-      <h2 class="projeto-titulo">${projeto.nome}</h2>
-      <p class="projeto-descricao">${projeto.descricao}</p>
-      <h3 class="ferramentas-titulo">Ferramentas Utilizadas</h3>
-      <div class="ferramentas-container">
-        ${projeto.ferramentas.map(icon => 
-          `<img src="${icon}" class="ferramenta-icon" alt="ferramenta">`
-        ).join("")}
-      </div>
-    `;
+    const container = document.getElementById("projetos-container");
+    if (!container) return;
 
-    container.appendChild(slide);
-  });
+    container.innerHTML = ""; // Limpa qualquer conteúdo prévio
 
-  // Inicializa o carrossel
-  new Swiper('.swiper.projetos', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
-  });
-
-  function handleImageLoad() {
-    this.style.opacity = '1';
-  }
-
-  setTimeout(() => {
-    const images = document.querySelectorAll('.projeto-imagem img');
-    images.forEach(img => {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 0.5s ease';
-      img.addEventListener('load', handleImageLoad);
-      
-      // Se a imagem já estiver em cache
-      if (img.complete) {
-        handleImageLoad.call(img);
-      }
+    projetos.forEach(proj => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `
+            <div class="projeto-imagem">
+                <img src="${proj.imagem}" alt="${proj.nome}">
+            </div>
+            <h2 class="projeto-titulo">${proj.nome}</h2>
+            <p class="projeto-descricao">${proj.descricao}</p>
+            <h3 class="ferramentas-titulo">Ferramentas Utilizadas</h3>
+            <div class="ferramentas-container">
+                ${proj.ferramentas.map(icon => `<img src="${icon}" class="ferramenta-icon" alt="Ferramenta">`).join('')}
+            </div>
+        `;
+        container.appendChild(slide);
     });
-  }, 100);
+
+    // Inicializa o SwiperJS após a injeção dos slides
+    new Swiper('.swiper.projetos', {
+        loop: true,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 }
 
-carregarProjetos();
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", carregarProjetos);
+} else {
+    carregarProjetos();
+}
+
