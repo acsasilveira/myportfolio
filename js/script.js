@@ -53,16 +53,20 @@ async function carregarProjetos() {
   const container = document.getElementById("projetos-container");
 
   projetos.forEach(projeto => {
-    // Criar slide
     const slide = document.createElement("div");
-    slide.classList.add("swiper-slide"); // precisa ser swiper-slide
+    slide.classList.add("swiper-slide");
 
     slide.innerHTML = `
-      <img src="${projeto.imagem}" alt="${projeto.nome}">
-      <h2>${projeto.nome}</h2>
-      <p>${projeto.descricao}</p>
-      <div class="ferramentas">
-        ${projeto.ferramentas.map(icon => `<img src="${icon}">`).join("")}
+      <div class="projeto-imagem">
+        <img src="${projeto.imagem}" alt="${projeto.nome}" loading="lazy">
+      </div>
+      <h2 class="projeto-titulo">${projeto.nome}</h2>
+      <p class="projeto-descricao">${projeto.descricao}</p>
+      <h3 class="ferramentas-titulo">Ferramentas Utilizadas</h3>
+      <div class="ferramentas-container">
+        ${projeto.ferramentas.map(icon => 
+          `<img src="${icon}" class="ferramenta-icon" alt="ferramenta">`
+        ).join("")}
       </div>
     `;
 
@@ -75,6 +79,24 @@ async function carregarProjetos() {
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
   });
+
+  function handleImageLoad() {
+    this.style.opacity = '1';
+  }
+
+  setTimeout(() => {
+    const images = document.querySelectorAll('.projeto-imagem img');
+    images.forEach(img => {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.5s ease';
+      img.addEventListener('load', handleImageLoad);
+      
+      // Se a imagem já estiver em cache
+      if (img.complete) {
+        handleImageLoad.call(img);
+      }
+    });
+  }, 100);
 }
 
 carregarProjetos();

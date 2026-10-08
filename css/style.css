@@ -57,10 +57,13 @@
 
 body {
     background-color: var(--jornal);
+    position: relative;
 }
 
 header {
     position: fixed;
+    z-index: 10000 !important;
+    width: 100%;
 }
 
 .botao {
@@ -269,10 +272,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: fixed !important;
     width: 100%;
     height: 4.5rem;
-    z-index: 1000;
+    z-index: 10000 !important;
+    transform: translateZ(0); /* Força hardware acceleration */
 }
 
 .logo{
@@ -350,7 +354,6 @@ a {
 }
 
 /* Estilizando Seção Home */
-
 
 /* Mobile */
 @media (max-width: 767px){
@@ -641,112 +644,202 @@ a {
     }
 }
 
-/* Estilizando a Seção Minha Experiências */
+/* Estilizando a Seção Minha Experiência */
+
+/* Configuração Geral Posicionamento na Camada */
+
+/* Reset do z-index do Swiper */
+.swiper,
+.swiper-container,
+.swiper.projetos,
+.swiper-wrapper,
+.swiper-slide,
+.swiper-slide-active {
+    z-index: auto !important;
+    position: relative !important;
+}
+
+/* Elementos de controle do Swiper */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+    z-index: 100 !important;
+    position: absolute !important;
+}
+
+/* Garantir que a seção experiências fique abaixo da navbar */
+#experiencias {
+    position: relative;
+    z-index: 1 !important;
+}
+
+.carrossel-container {
+    position: relative;
+    z-index: 1 !important;
+}
+
+/* Estilização Geral */
+
+.swiper.projetos {
+    position: relative;
+    max-width: 90vw;
+    margin: 2rem auto;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    overflow: hidden;
+}
+
+/* CONTAINER da imagem */
+.projeto-imagem {
+    max-width: 500px; /* Largura máxima */
+    width: 100%;
+    height: 280px; /* Altura fixa */
+    border-radius: 8px;
+    margin: 0 auto 1.5rem; /* Centraliza horizontalmente */
+    overflow: hidden;
+    position: relative;
+    background: repeating-linear-gradient(
+        45deg,
+        #d3d3d3,
+        #d3d3d3 2px,
+        #e8e8e8 2px,
+        #e8e8e8 4px
+    ); /* Placeholder enquanto carrega */
+}
+
+/* IMAGEM dentro do container */
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mostra imagem completa */
+    object-position: center center;
+    display: block;
+}
+
+/* Se quiser que a imagem preencha o container completamente: */
+/* .projeto-imagem img {
+    object-fit: cover;
+} */
+
+
+.projeto-titulo {
+    font-family: var(--subtitulo);
+    color: var(--cinza-escuro);
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.projeto-descricao {
+    font-family: var(--texto);
+    color: var(--preto);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.ferramentas-titulo {
+    font-family: var(--subtitulo);
+    color: var(--cinza-escuro);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.ferramentas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.ferramenta-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.ferramenta-icon:hover {
+    transform: scale(1.1);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--marrom) !important;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--preto) !important;
+}
+
+.swiper.projetos .swiper-pagination-bullet {
+    background-color: var(--marrom) !important;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper.projetos .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background-color: var(--marrom) !important;
+}
+
 
 /* Mobile */
 @media (max-width: 767px) {
-    .swiper {
-        position: relative;
-        max-width: 75vw;
-        background-color: var(--branco);
-        overflow: hidden;
-        z-index: 0
+    .swiper.projetos {
+        max-width: 95vw;
+        padding: 1rem;
+    }
+    
+    .projeto-imagem {
+        height: 200px;
+    }
+    
+    .projeto-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .projeto-descricao {
+        font-size: 0.9rem;
+    }
+    
+    .ferramenta-icon {
+        width: 2rem;
+        height: 2rem;
     }
 
 }
 /* Tablet */
 @media ((min-width: 768px) and (max-width: 1023px)){
-    .projetos {
-        max-width: 100vw;
-        max-height: 100vh;
-        margin-top: 0.6rem;
-    }
-
-    .container-projetos {
-        background-color: var(--branco);
-    }
-
-    .container-projetos .imagens{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        
-    }
-
-    .projeto-img {
-        max-width: 60vw;
-        margin-top: 0.7rem;
-    }
-
-    .container-projetos .descricao {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-projetos .ferramentas {
-        margin-top: 0.5rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .ferramentas img{
-        margin: 0.3rem;
-        width: 1.875rem;
-        height: 1.875rem;
-    }
-
-    .php {
-        width: 2.8125rem;
-        height: 2.8125rem;
+    .swiper.projetos {
+        max-width: 85vw;
     }
 }
 
 /* Computer */
 @media (min-width: 1024px){
-    .projetos {
-        max-width: 100vw;
-        max-height: 100vh;
-        margin-top: 0.6rem;
-    }
-
-    .container-projetos {
-        background-color: var(--branco);
-    }
-
-    .container-projetos .imagens{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        
-    }
-
-    .projeto-img {
-        max-width: 60vw;
-        margin-top: 0.7rem;
-    }
-
-    .container-projetos .descricao {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-projetos .ferramentas {
-        margin-top: 0.5rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .ferramentas img{
-        margin: 0.3rem;
-        width: 1.875rem;
-        height: 1.875rem;
-    }
-
-    .php {
-        width: 2.8125rem;
-        height: 2.8125rem;
+    .swiper.projetos {
+        max-width: 80vw;
     }
 }
 
